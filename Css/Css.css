@@ -258,3 +258,13 @@ footer, .footer {
 #btnTop:hover {
     transform: scale(1.1);
 }
+.ImagenPersonal {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40%; /* Evita que se salga de la pantalla en dispositivos pequeños */
+    height: auto;     /* Mantiene la proporción de la foto */
+    border-radius: 12px; /* Opcional: para que se vea elegante con esquinas redondeadas */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
