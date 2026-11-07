@@ -1,0 +1,238 @@
+/* ==========================================================================
+   DEV-AI - HOJA DE ESTILOS DEFINITIVA (CAJAS RESTAURADAS)
+   ========================================================================== */
+
+:root {
+    --bg-main: #0b0f19;          
+    --bg-card: #151c2c;          
+    --bg-nav: #0d1322;           
+    --primary-color: #38bdf8;    
+    --text-primary: #f8fafc;     
+    --text-secondary: #94a3b8;   
+    --border-color: #1e293b;     
+    --font-stack: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-stack);
+    line-height: 1.7;
+    min-height: 100vh;
+    display: block;
+}
+
+/* --- ENCABEZADO Y HEADER CENTRADO/ELEGANTE --- */
+header {
+    background-color: var(--bg-nav);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.8rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.Titulo {
+    font-size: 3.5rem;
+    font-weight: 950;  
+    letter-spacing: 3px;
+    color: var(--text-primary);
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+/* Menú de navegación (Excepción: Sin cajas externas) */
+.navbar ul {
+    display: flex !important;
+    flex-direction: row !important;
+    list-style: none !important;
+    gap: 1.2rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.navbar ul li {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.navbar a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--primary-color);
+    background-color: rgba(56, 189, 248, 0.1);
+    border-color: var(--primary-color);
+}
+
+/* --- TIPOGRAFÍA Y TÍTULOS --- */
+h1 {
+    font-size: 2.2rem;
+    color: var(--text-primary);
+    margin: 2.5rem 5% 1.5rem 5%;
+    text-align: center;
+}
+
+.Titulosecundario {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 2rem 5% 1rem 5%;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid rgba(56, 189, 248, 0.2);
+}
+
+p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin: 0 5% 1.5rem 5%;
+    max-width: 1200px;
+}
+
+b {
+    color: var(--text-primary);
+}
+
+/* --- LISTAS EN FORMA DE CAJAS (Para Herramientas, Impacto, etc.) --- */
+ul, ol {
+    list-style: none;
+    margin: 1.5rem 5% 2.5rem 5%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+ul li, ol li {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+ul li:hover, ol li:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px);
+}
+
+/* --- PÁGINA CREADOR (Excepción: Una sola caja unificada) --- */
+.SeccionCreador {
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.SeccionCreador ul {
+    display: block !important;
+    margin: 1.5rem 5% !important;
+    padding: 1.5rem 2rem !important;
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    border-left: 4px solid var(--primary-color) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.SeccionCreador ul li {
+    display: block !important;
+    background: none !important;
+    border: none !important;
+    padding: 0.6rem 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.SeccionCreador ul li:hover {
+    transform: none !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.SeccionCreador ul li:last-child {
+    border-bottom: none !important;
+}
+
+.SeccionCreador ul li::before {
+    content: "▪ ";
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* --- IMAGEN PRINCIPAL --- */
+#ImagenPrincipal {
+    display: block;
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    max-height: 550px;
+    object-fit: cover;
+    margin: 1.5rem auto 3rem auto;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+/* --- FOOTER --- */
+footer, .footer {
+    background-color: var(--bg-nav);
+    border-top: 1px solid var(--border-color);
+    padding: 2rem 5%;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer-content p, footer p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+/* --- CONTENEDOR PARA VIDEOS DE YOUTUBE --- */
+.video-container {
+    text-align: center;
+    margin: 4rem 5%;
+}
+
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.video-wrapper iframe {
+    width: 800px;
+    height: 450px;
+    max-width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
